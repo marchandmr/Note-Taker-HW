@@ -15,11 +15,11 @@ app.use(express.json());
 
 //set up routes (when the user types /notes, express grabs the notes.html file and displays it )
 app.get("/notes", function (req, res) {
-    res.sendFile(path.join(__dirname, "./notes.html"));
+    res.sendFile(path.join(__dirname, "/public/notes.html"));
 })
 
 app.get("*", function (req, res) {
-    res.sendFile(path.join(__dirname, "./index.html"));
+    res.sendFile(path.join(__dirname, "/public/index.html"));
 })
 
 
